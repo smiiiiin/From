@@ -1,0 +1,147 @@
+h1 {
+    color: skyblue;
+}
+
+
+/* 헤더명을 쓰고 그 안에 A: B 하면 A=B라는 뜻. 이게 주석이구나 */
+
+botton {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.lisst {
+    color: white;
+    font-style: italic;
+    /* html에서 class= "list"에 있는 것들에 적용됨 css에서 .온점 찍기*/
+}
+
+.boppi {
+    color: rgb(216, 189, 216);
+}
+
+.tb {
+    background-color: aqua;
+}
+
+.sec {
+    background-color: lightcoral;
+}
+
+.input_type {
+    background-color: royalblue;
+}
+
+.mona {
+    margin: 10px;
+    padding: 10px;
+    border: solid 5px #8B4513;
+    display: flex;
+}
+
+#mung {
+    margin: 10px;
+    padding: 10px;
+    border: solid 5px pink;
+    display: flex;
+}
+
+#map {
+    /*!!! class는 .으로 받고*ID는 #으로 받는다. */
+    margin: 10px;
+    padding: 10px;
+    border: solid 5px black;
+}
+
+.css1 {
+    text-align: center;
+}
+
+.small {
+    font-variant: small-caps;
+}
+
+.serif {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.blog:link {
+    color: blue;
+}
+
+.blog:visited {
+    color: brown;
+}
+
+.blog:hover {
+    color: coral;
+}
+
+.blog:active {
+    color: khaki;
+}
+
+tr:hover {
+    background-color: gray;
+}
+
+.two_color {
+    background: red;
+    background: -webkit-linear-gradient(red, yellow);
+}
+
+.sumin_b {
+    display: block;
+    background: white;
+    padding: 0px;
+    border: none;
+    position: relative;
+}
+
+.contents {
+    display: none;
+    background: white;
+    padding: 0px;
+    border: none;
+    position: absolute;
+}
+
+.contents a {
+    display: block;
+}
+
+
+/*이부분 너무 중요하다*/
+
+.pack:hover .sumin_b {
+    /*HTML에서 class안에 class이기 때문에 동등한것끼리 안에 있어서 계속 .을 찍어주지만 */
+    /*팩에 갖다대면 (hover), 버튼은 핑크가 되고*/
+    background-color: pink;
+}
+
+.contents a:hover {
+    /* class안에 그냥 a가 있는 것이므로 .을 안찍고 a로 연결해 나간다. */
+    background-color: red;
+}
+
+.pack:hover .contents {
+    /*팩에 갖다대면 (hover), 컨텐츠들은 보여진다.*/
+    display: block;
+    position: absolute;
+}
+
+.input {
+    width: 100%;
+    padding: 10px 40px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: solid 2px #483D8B;
+    border-radius: 5px;
+    font-size: 14px;
+    background-image: url("fl.jpeg");
+    background-position: 5px 4px;
+    background-repeat: no-repeat;
+}

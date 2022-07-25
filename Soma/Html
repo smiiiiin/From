@@ -1,0 +1,28 @@
+<!Doctype HTML>
+<html lang="ko">
+<html>
+
+<head>
+    <title>soma</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="soma.css">
+    <script src="soma.js"></script>
+</head>
+
+<body>
+    <h>soma</h>
+
+    <div class="map">
+        <div id="hint">
+            SW마에스트로
+        </div>
+        <div class="nonclick">
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

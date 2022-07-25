@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html>
+
+<head>
+    <!--머리에서 3가지: UTF8, 링크:with css&자바스크립트, title -->
+    <meta charset="UTF-8">
+    <title>
+        Study HTML with Sumin
+    </title>
+
+</head>
+
+<body background="dream.jpeg">
+    <h1>
+        Let's start HTML study with me!
+    </h1>
+
+
+    <botton> Btn: Yes! </botton>
+    <!--버튼은 버튼이다-->
+    <ul>
+        <!--태그 사이에 있는거 사용자지정이다. (드디어 자유)-->
+        <li class="lisst">First </li>
+        <li class="lisst">Second </li>
+        <li class="lisst">Third </li>
+        <!--li니 클래스 -->
+    </ul>
+
+    <div style="background-color:aliceblue;">
+        <p class="boppi">
+            <br> &lt;meta charset= "UTF-8"&gt; 한글버전으로
+            <br> 머리 안에 한글버전+ title있고 body몸에는 &lt; 헤드 h1 &gt; 이런게 있고 &lt;p&gt; 는 문단
+            <br> 머리안에 !연결고리도 필수 &lt;태그명=link 속성명=rel (이 앞에 2개는 보통 저장되어 있다)
+            <br> = "stylesheet" 참조는 href=".css파일이름">
+            <br> href이 단독으로 쓰일때는 태그명 a는 필수다:) head랑 body를 제외한 모든 tag는 크게 앞뒤로 있는게 아니라 해당부분에 감싼다.
+            <br> pre는 free하게 내가 지정한데로 되니까 좋다. 말그대로 presetted
+        </p>
+    </div>
+
+
+    <p>class="" 내가 class이름 만들어주고 CSS에서 '.'점을 찍어서 클래스명으로 소환할 수 있다.
+    </p>
+    <pre> <a href="https://www.pinterest.co.kr/"> ha h a ...go pinterest </a> </pre>
+    <p style="color: yellow">
+
+        !!!중요
+        <태그명 속성명="개발자지정명"> 내용쓰고 </태그>
+    </p>
+    <p> 위에 빨간색 어떻게 했냐면(이거는 CSS랑 연결되는게 아니라 단독으로 일일히 연결하는 것)
+        <br>
+        <태그명뒤에다가 style="color: red"> 내용 쓰고 &lt;/태그&gt;
+    </p>
+
+    <table style="width:100%">
+        <!--폭을 꽉차게 한다-->
+        <tr style="background-color:lightgrey">
+            <th>Algorithm</th>
+            <th>DB</th>
+            <th>WEB</th>
+        </tr>
+
+        <tr>
+            <td>상</td>
+            <td>중</td>
+            <td>중</td>
+        </tr>
+        <tr>
+            <td>C++</td>
+            <td>Oracle</td>
+            <td>HTML&CSS&JAVA_SCRIPT</td>
+        </tr>
+    </table>
+    <p class="tb"> 테이블의 경우에는 3개만 우선 생각하자 tr(테이블 row행) : <br> 행마다 제목을 넣을 건지= th(테이블 header헤더),<br> 아니면 definition을 정의를 넣을건지= td (테이블 definition정의, 내용)
+    </p>
+
+    <iframe src="http://tcpschool.com/html/html_space_framesIframes"></iframe>
+
+    <p> &lt;태그명 속성명=""&gt;내용&lt;/태그명&gt; 에서 태그명 속성명 많이 나오는 건 외우자.
+        <table style="width:100%">
+            <tr style="background-color:lightgrey">
+
+                <th> 태그명</th>
+                <th> 속성명</th>
+            </tr>
+
+            <tr>
+                <td>&lt;link rel= "stylesheet" href= "theory.css"&gt; </td>
+                <td>링크랭크아니라 링크렐 이건 그냥 암기 </td>
+            </tr>
+
+            <tr>
+                <td>&lt;script src= "theory.js"&gt; &lt;/script&gt; </td>
+                <td>js는 스크립트를 먼저 쓴다 </td>
+            </tr>
+
+            <tr>
+                <td>li나 p나 div(문단)나 아무데나(class로 CSS와 연결) </td>
+                <td>class </td>
+            </tr>
+
+            <tr>
+                <td>a(링크첨부) </td>
+                <td>href </td>
+            </tr>
+
+            <tr>
+                <td>img(이미지) 나 iframe(사이트첨부) </td>
+                <td>src </td>
+            </tr>
+
+            <tr>
+                <td>table이나 p나 아무데나(폰트사이즈나 배경색)</td>
+                <td>style </td>
+            </tr>
+
+        </table>
+    </p>
+
+    <div class="sec">
+        section의 요소:
+        <br>7가지로 코드를 안봐도 사용된 의미를 정확히 전달
+        <br> 태그 자체로서의 기능이 있다기보다는 약속같은 느낌이 있는데 맞는가? &lt;nav&gt;는 navigation의 약어로 위에 링크들 여러개가 있다. 메뉴느낌.
+
+
+    </div>
+
+    <form action="/examples/media/request.php">
+        여러분이 가장 좋아하는 숫자는 몇인가요?<br> (단, 1부터 9까지에서 골라주세요!)<br><br>
+        <input type="number" name="favnum" min="1" max="9">
+        <input type="submit" value="전송">
+    </form>
+
+    0 <input type="range" name="favnum" min="1" max="9"> 9
+    <input type="submit" value="전송">
+
+    <p class="input_type">
+        이거는 이제 &lt;input type="" &gt; input 속성명=""하고 밑에 것들은 !!뒤!!에 붙는 속성명들 이다.
+        <br>input은 꽁지마무리 tag가 없다.
+        <br> &lt;form action="처리할페이지주소" method="get|post"&gt;&lt;/form&gt;
+        <br> like this
+        <br> 여기서 type 옆에 ""에 들어가는게 date, time, month, week, number, range, color 등등이 있고
+        <br> !!!이부분 중요!!! name은 그냥 변수처럼 명목적인것, 그리고 value는 초기값 min, max도 설정가능
+        <br> input요소의 속성명 :유용한거 많음, &lt; &gt; 안에 끝에 &gt;전에 써주기만하면됨
+        <br> 1. 한번 검색한거 밑에 떠서 클릭하게 하는거 autocomplete만 띡 쓰기
+        <br> 2. 안누르고 안베기는거 넘어가지 못하는거 required만 띡 쓰기
+        <br> 3. 막 ID랑 비번칠때 회색글자로 입력하시오 같은거 쓰는거 placeholder="something"
+        <br> 4. 여러개 선택사항이 뜨고 선택할 수 있는거 list :
+        <div style="color: white">
+            <br>+4번에 대한 내용
+            <br>여기서 외울게 좀 있다. &lt; &gt; &lt; form action = "asdlkfja.php" &gt;
+            <br> &lt; input list ="coffee" name="사용자가 보내는 데이터의 이름" &gt;
+            <br> &lt;datalist id= coffee&gt;
+            <br> &lt;option value(옵션값이 뭐야~?)="americano"&gt;
+            <br> &lt;option value(옵션값이 뭐야~?)="latte"&gt;
+
+            <br> &lt;/datalist&gt;
+            <br> &lt;/form&gt;
+        </div>
+    </p>
+
+    <button onclick="findLoca()">현재 위치의 위도와 경도</button>
+    <p id="myLocation"></p>
+
+    <!--모나리자 버튼누르면 밑으로 이동하기 -->
+    <div class="mona">
+        <img id="monalisa" src="monalisa.png" alt="모나리자" width="200" height="300">
+        <p>원본 이미지</p>
+        <!--캔버스는 그림을 놓기 위해 준비한 배경느낌 -->
+        <canvas id="CanMona" width="200px" height="300px" style="border: 1px solid #993300" ;>
+		이 문장은 사용자의 웹 브라우저ㅣ canvas 요소를 지원하지 않을 때 나타납니다!
+	    </canvas>
+        <p><button onclick="B()">이미지 그리기</button></p>
+    </div>
+
+
+    <!--모나리자 드래그-->
+    <!--난 받을 수도 있고 ondrop="drop(ev)", 갈 수도 있어 ondragover= "dragEnter(ev)"-->
+    <div ondrop="drop(event)" ondragover="dragEnter(event)">
+        <!--ondragstart="drag(evnet)" 시작도 할 수 있지렁~ -->
+        <img id="mung" width="180" height="180" src="mung.jpeg" draggable="true" ondragstart="drag(event)">
+        <img id="map" width="180" height="180" src="mung.jpeg" draggable="true">
+    </div>
+
+    <br>
+    <p class="css1">
+        <p class="small">
+            어디 한번 중앙으로 나열해 보시지
+            <br> 소문자는 조그만하게 대문자는 크게 쓴다. 소문자를 크게쓰는 방법은 없나? css-> textallian: center; This is so cute string. THINGS MAKE THAT IS "FONT-VARIANT: SMALL-CAPS"
+        </p>
+    </p>
+
+    <a class="blog" href="https://www.google.com/webhp?hl=en">
+comehere, there is sumin's home 
+    </a>
+    <button class="two_color">here </button >
+
+
+        <!--팩에 싸가지고 버튼이랑, 콘텐츠랑 연결하기 -->
+<div class="pack">
+    <button class="sumin_b">sumin's Blog</button >
+    <div class="contents">
+        <a href="https://blog.naver.com/PostList.nhn?blogId=travis97&from=postList&categoryNo=1">일기</a>
+        <a href="https://blog.naver.com/PostList.nhn?blogId=travis97&from=postList&categoryNo=37">코딩</a>
+        <a href="https://blog.naver.com/PostList.nhn?blogId=travis97&from=postList&categoryNo=39">정보</a>
+        <a href="https://blog.naver.com/PostList.nhn?blogId=travis97&categoryNo=38&from=postList&parentCategoryNo=38#">바디</a>
+    </div>
+</div>
+
+
+    <br><br><br><br><br><br><br>
+
+    <h1>input 요소에 아이콘이나 이미지 삽입</h1>
+	<form>
+		검색할 키워드를 입력하세요 : <br>
+		<input type="text" name="search"><br>
+	</form>
+
+    <!--이게 CSS랑 연결하는 거다-->
+    <link rel="stylesheet" href="theory.css">
+    <!--링크 랭크(rel) 스타일시트 주석 a빼고-->
+    <!--이게 Js랑 연결하는 거다-->
+    <script src="theory.js"></script>
+</body>
+
+</html>

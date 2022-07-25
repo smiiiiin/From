@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "en">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<title>
+Let's start HTML
+</title>
+</head>
+
+<body>
+<h1>
+I think i can make it <br>
+Do you think so? </h1>
+<h2>
+h는 head랑 body처럼 크게 앞뒤로 있는게 아니라 해당부분에 감싸야지! </h2>
+pre는 free하게 내가 지정한데로 되니까 좋다. 말그대로 presetted
+<pre> y e s ... ha h a ... </pre>
+
+<p> 알고리즘 c++로 공부하고 SQL이랑 WEB부분 이렇게 3가지를 챙겨야하는데 사실상 SQL의 경우는 
+<br> 마에스트로때문에 하는거고 원래는 어려운 알고리즘을 더 많이 공부하자.</p>     <p> 기초를 쌓아야 하니까 
+<br> 재귀문제도 많이 풀고 DP동적프로그래밍 DSF/BSF그리고 그리디문제까지 중요한 것들을 챙기자
+<br> 무지성암기를 해서라도 노력을 하고 찐으로 이해하도록 해야하는 것이 중요하다 </p>
+    <p> meta 타입이름 띄어쓰고 변수명 charset 문자상태는 ""쌍따옴표 안에 값쓰기 UTF-8 한글버전으로 </p>
+</body>
+
+</html>
