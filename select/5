@@ -1,0 +1,4 @@
+SELECT ANIMAL_ID, NAME
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID ASC; 
+//오다바이 ㅋㅋㅋㅋ 알고리즘 DP DSF BSF하고 머리 터질 것 같다가 이런거 하니까 쉬는 것 같다.

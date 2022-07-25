@@ -1,0 +1,94 @@
+/*
+가장 중요하고 어려웠던 문제 4번문제
+그냥 join하면 null할 기회 조차 없어져버린다.
+left조인을 함으로써 가짜숫자 NUM에대해서 진짜 시간일때, 
+count가 없다는 공간을 즉, null의 공간을 만들어 놓을 수가 있다. 
+*/
+
+/*2번 동명 동수에 맞게*/
+SELECT DISTINCT(NAME), COUNT(*) "COUNT"
+FROM ANIMAL_INS
+GROUP BY NAME
+HAVING COUNT(NAME)>1
+ORDER BY NAME;
+
+
+/*3번*/
+/*GROUP BY 다음에 오더바이[오도바이] ORDER BY 순서주의!!*/
+/*3-1*/
+/*
+SELECT HOUR(DATETIME) , COUNT(ANIMAL_ID) COUNT 
+FROM ANIMAL_OUTS 
+WHERE HOUR(DATETIME) >= 9 AND HOUR(DATETIME) < 20 
+GROUP BY HOUR(DATETIME) 
+ORDER BY HOUR(DATETIME)
+*/
+
+/*3-2*/
+/*
+SELECT HOUR(DATETIME) HOUR , COUNT(ANIMAL_ID) COUNT 
+FROM ANIMAL_OUTS 
+GROUP BY HOUR(DATETIME) 
+HAVING HOUR >= 9 AND HOUR < 20 /*HAVING으로 할거면 SELECT에서 내려와야한다!!!!!!!*/
+ORDER BY HOUR(DATETIME)
+*/
+
+/*3-3(오답)*/
+/*
+SELECT HOUR(DATETIME) , COUNT(*) COUNT 
+FROM ANIMAL_OUTS 
+GROUP BY DATETIME  /* 왜여기엔 HOUR처리[HOUR(DATETIME)]가 안되고 HOUR을 빼면, 결과는 또 왜다른지: 위에 것처럼 해야한다.  */
+HAVING HOUR(DATETIME) >= 9 AND HOUR(DATETIME) < 20
+ORDER BY HOUR(DATETIME);
+*/
+
+
+ /*4번 오답*/
+SET @HOUR:=-1;
+WITH F AS( SELECT @HOUR:=@HOUR+1 NUM, HOUR(DATETIME) HOUR
+          FROM ANIMAL_OUTS)
+, R AS (SELECT HOUR(DATETIME) HOUR, COUNT(ANIMAL_ID) COUNT 
+           FROM ANIMAL_OUTS
+           GROUP BY HOUR(DATETIME))
+SELECT F.NUM, R.COUNT
+FROM F,R
+WHERE F.NUM=R.HOUR
+LIMIT 24;
+
+
+ /*최종 (의도에 맞는) 4번  */
+SET @NUM:=-1; 
+
+WITH F AS (SELECT @NUM:=@NUM+1 NUM
+                      , HOUR(DATETIME) HOUR
+                   FROM ANIMAL_OUTS
+                  LIMIT 24 
+               ),
+R AS (SELECT HOUR(DATETIME) HOUR, COUNT(*) COUNT
+        FROM ANIMAL_OUTS
+        GROUP BY HOUR(DATETIME))
+                
+SELECT F.NUM HOUR 
+     , CASE WHEN R.COUNT IS NULL THEN 0 
+       ELSE R.COUNT END
+       COUNT
+FROM F
+LEFT JOIN R 
+ON F.NUM = R.HOUR   
+ORDER BY F.NUM;
+
+
+/*(간단한) 4번 답*/
+/*SET @something = 변수 선언과 동시에 초기화*/
+/*어떤건 값을 딱 정할땐 = , 더해주거나 바꿔줄때는 :=  */
+SET @HOUR = -1; 
+SELECT (@HOUR := @HOUR+1) HOUR, 
+(SELECT COUNT(*) 
+FROM ANIMAL_OUTS 
+WHERE HOUR(DATETIME) = @HOUR) COUNT)  
+FROM ANIMAL_OUTS 
+WHERE @HOUR < 23
+/*이미 -때에서 WHERE GROUP BY 역할을 해주고 있다. 일단 외우자. 중복으로 쓰면 나올 것도 안나온다. */
+
+
+

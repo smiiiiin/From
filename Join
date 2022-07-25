@@ -1,0 +1,46 @@
+/* TIP===================================================================================================== */
+
+,쉼표로 join한게 아닌 이상 RIGHT JOIN OR LEFT JOIN OR FULL OUTER JOIN 모두 ON이라는 곳에서 조건 달아야한다.
+그리고 RIGHT, LEFT JOIN은 합집합, 차집합 잘 이용하면 잘 풀 수 있다:) */
+
+join의 종류는 4가지이다. (중요) 'on' 이랑 짝!!!
+1) 그냥 join = 교집합 2) left join= A      3) right join = B    4) outer join= all 
+
+/* TIP====================================================================================================== */
+
+/*1번*/
+SELECT B.ANIMAL_ID, B.NAME
+FROM ANIMAL_INS A
+RIGHT JOIN ANIMAL_OUTS B
+ON A.ANIMAL_ID = B.ANIMAL_ID
+WHERE A.ANIMAL_ID IS NULL ;
+
+/*2번*/
+SELECT B.ANIMAL_ID,B.NAME 
+FROM ANIMAL_INS A 
+JOIN ANIMAL_OUTS B 
+ON B.ANIMAL_ID = A.ANIMAL_ID 
+WHERE B.DATETIME < A.DATETIME 
+ORDER BY A.DATETIME
+
+/*3번*/
+SELECT A.NAME, A.DATETIME  /*B.NAME에는 아무것도 없을 거임*/
+FROM ANIMAL_INS A 
+LEFT JOIN ANIMAL_OUTS B
+ON A.ANIMAL_ID= B.ANIMAL_ID /*어떻게 조인을 할건지 on으로 조건*/
+WHERE B.ANIMAL_ID IS NULL /*마지막에 아닌 얘는 덜어내기, B.DATETIME 도 된다*/
+ORDER BY A.DATETIME
+LIMIT 3;
+
+
+/*4번*/
+SELECT A.ANIMAL_ID, A.ANIMAL_TYPE, A.NAME 
+FROM ANIMAL_INS A JOIN ANIMAL_OUTS B ON A.ANIMAL_ID = B.ANIMAL_ID 
+WHERE A.SEX_UPON_INTAKE != B.SEX_UPON_OUTCOME ORDER BY A.ANIMAL_ID
+
+
+
+
+
+
+

@@ -1,0 +1,3 @@
+SELECT NAME FROM ANIMAL_INS ORDER BY DATETIME LIMIT 1
+
+//LIMIT 은 뭐지? 말그대로 제한. 오름차순이라 먼저들어온얘부터 나열하는데 0번인덱스로 제한한다는 의미

@@ -1,0 +1,18 @@
+/*leet176: 나의 시도 (NULL추출은 생각안함: 왜 안돌아가지?) */
+
+SET @NUM:=0;
+SELECT @NUM:=@NUM+1, DISTINCT(salary)
+FROM Employee
+ORDER BY salary
+WHERE @NUM=2
+LIMIT 3;
+
+
+/*leet176: 정답(dense_rank() over (조건) rank 이용하기   */
+WITH cte AS (
+SELECT salary, DENSE_RANK() OVER (ORDER BY salary DESC) rank 
+FROM Employee
+)
+SELECT ISNULL((SELECT top 1 salary FROM cte WHERE rank= 2), null) SecondHighestSalary;
+
+

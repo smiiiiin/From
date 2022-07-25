@@ -1,0 +1,35 @@
+/* 가장 최근에 들어온 아이 */
+SELECT MAX(DATETIME)
+FROM ANIMAL_INS;
+
+/* 가장 최근에 들어온 아이-RANK() OVER (조건) 이용하기 */
+WITH R AS (SELECT RANK() OVER(ORDER BY DATETIME DESC) RAN , DATETIME
+FROM ANIMAL_INS)
+
+
+SELECT R.DATETIME
+FROM R
+WHERE R.RAN=1;
+
+/* 가장 나중에 들어온 아이 */
+SELECT MIN(DATETIME)
+FROM ANIMAL_INS;
+
+/* 가장 나중에 들어온 아이 */
+/* select에서 이름 바꿔서 출력하고 싶으면 그냥 뒤에 쓰면 된다.
+근데 table의 경우 지정할때 AS 꼭 사용해야한다
+그리고 갯수세는 거 NUM이 아니라 COUNT다. NAME을 사용하면 동일이름이 있을 수 있어서 기본키가
+보통안된다. 기본키(최소성+유일성)는 NULL도 안되고(개체무결성) 같은 중복값도 안된다. 그래서 ANIMAL_ID이용 */
+
+SELECT COUNT(ANIMAL_ID) count 
+FROM ANIMAL_INS;
+
+/* DISTINCT 이름 개수 출력: 중복제거 */
+SELECT COUNT(A.NAME) count
+FROM (SELECT DISTINCT NAME FROM ANIMAL_INS) AS A
+WHERE NAME IS NOT NULL;
+
+/* 다른답: DISTINCT 이름 개수 출력: 중복제거 */
+SELECT COUNT(DISTINCT(NAME)) COUNT
+FROM ANIMAL_INS
+WHERE NAME IS NOT NULL;
