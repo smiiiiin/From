@@ -69,3 +69,33 @@ print("저는 \"수미닙\"이다")
 print("저는 '수미닙'이다")
 print("c:usr\\bin\\desktop")
 print('red velvet\rCUTE')
+
+URL= "http://youtube.com"
+st= URL.replace("http://", "")
+print(st)
+st= st[:st.index(".")]
+print(st)
+pas= st[:3]+str(len(st))+str(st.count('e'))+"!"
+print(pas)
+print(f"{URL}의 비밀번호는 {pas}임")
+
+# 리스트 
+sub=["조세호","유재석","박명수"]
+print(sub.index("유재석"))
+sub.append("하하")
+sub.insert(1,"정형돈")
+print(sub)
+print(sub.pop())
+print(sub)
+
+list=[1,2,3,4,30]
+print(list)
+print(list[-1::-1])
+list.sort()
+print(list)
+list.reverse()
+print(list)
+list.clear()
+print(list)
+list=["오수민",26, True]
+print(list)
