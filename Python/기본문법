@@ -127,3 +127,16 @@ print(didi.values())
 print(didi.items())
 didi.clear()
 print(didi)
+
+
+menu=("고기","생선","채소","과일")
+print(menu[0])
+print(menu[2])
+# menu.add("tomato")
+
+(name, age, hobby)= ("종국", 20, "health")
+print(name, age, hobby)
+
+set={1,2,3,3,3}
+# 중복허용 X
+print(set)
