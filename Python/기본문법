@@ -99,3 +99,31 @@ list.clear()
 print(list)
 list=["오수민",26, True]
 print(list)
+
+
+
+
+dict={3: "재석", 100: "태호"}
+print(dict[3])
+print(dict[100])
+print(dict.get(3))
+print(dict.get(5))
+# get을 쓰면 없는 값에 대해서 None을 출력
+print("hi")
+print(3 in dict)
+print(5 in dict)
+# 사전에 키가 있나 없나 확인가능
+
+didi={"sumin":"sumi", "rini":"noze"}
+print(didi)
+print(didi["sumin"])
+didi["sumin"]="슬기"
+print(didi)
+del didi["rini"] 
+#  키를 삭제함으로써 쌍을 삭제가능
+print(didi)
+print(didi.keys())
+print(didi.values())
+print(didi.items())
+didi.clear()
+print(didi)
