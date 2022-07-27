@@ -140,3 +140,53 @@ print(name, age, hobby)
 set={1,2,3,3,3}
 # 중복허용 X
 print(set)
+
+
+sett={1,2,3,3,3}
+# 중복허용 X
+print(sett)
+
+java={"재석","수민","태호","세형"}
+python= set(["재석","명수"])
+print( java & python)
+print(java.intersection(python))
+print(java | python)
+print(java.union(python))
+
+print(java - python)
+
+python.add("수민")
+print(python)
+
+java.remove("태호")
+print(java)
+
+
+
+menu={"커피","우유","주스"}
+print(menu, type(menu))
+menu=list(menu)
+print(menu, type(menu))
+menu=tuple(menu)
+print(menu, type(menu))
+
+
+
+from random import *
+
+li=[1,2,3,4,5]
+print(li)
+shuffle(li)
+print(li)
+print(sample(li,1))
+
+users= range(1,21) #1-20까지 숫자
+print(type(users))
+users= list(users)
+# print(type(users))
+shuffle(users)
+print(users)
+winners= sample(users, 4)
+print(f"치킨당첨자는 {winners[0]}이고 커피당첨자는{winners[1]}다")
+
+
