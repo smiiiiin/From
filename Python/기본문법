@@ -44,4 +44,28 @@ print(index )
 #  print(fan.index("sec"))
 #  error를 출력
 
+print("아","아아아아아"+"2ne1")
+print("진짜 추억이다")
+print('')
+print("""아 아아아아아 2ne1
+진짜 추억이다 """)
 
+print("나는 %d 살" %26)
+print("나는 %s를 좋아한다" %"사과")
+print("apple은 %c로 시작해요" %'a')
+print("나는 %s살이다" %"20")
+print("나는 {}살입니다".format(20))
+print("나는 {}색과 {}색을 좋아해".format("파랑","핑크"))
+print("나는 {1}색과 {0}색을 좋아해".format("파랑","핑크"))
+
+print("난 {color}살이고 {age}색 러버".format(age=20 ,color="red"))
+
+age=100
+food= "banana"
+print(f"난 {age}살이고 {food}먹어")
+
+print("백문이 불여일견\n백견이 불여일타")
+print("저는 \"수미닙\"이다")
+print("저는 '수미닙'이다")
+print("c:usr\\bin\\desktop")
+print('red velvet\rCUTE')
