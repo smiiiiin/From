@@ -260,3 +260,16 @@ students=[i.upper() for i in students]
 
 print(students)
 
+from random import *
+
+cnt=0 
+for i in range(1,51):
+  time= randrange(5,51)
+  if(5<= time <=15): #매칭 성공 
+    print(f"{i}번째 손님 {time}분 소요예정")
+    cnt+=1
+  else: #매칭 실패 
+    print(f"{i}번째 손님,{time}분 소요예정")
+
+print(f"총 탑승승객{cnt}명")
+
