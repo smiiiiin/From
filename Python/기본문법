@@ -1,5 +1,6 @@
-import math
-import random
+# !!중요
+from random import *
+
 print(not True) 
 '''얘는 반드시 T대문자'''
 a=3
@@ -60,6 +61,10 @@ print("나는 {1}색과 {0}색을 좋아해".format("파랑","핑크"))
 
 print("난 {color}살이고 {age}색 러버".format(age=20 ,color="red"))
 
+
+# !!중요
+# !!중요
+# !!중요
 age=100
 food= "banana"
 print(f"난 {age}살이고 {food}먹어")
@@ -99,8 +104,6 @@ list.clear()
 print(list)
 list=["오수민",26, True]
 print(list)
-
-
 
 
 dict={3: "재석", 100: "태호"}
@@ -162,7 +165,7 @@ java.remove("태호")
 print(java)
 
 
-
+# !!중요 list, set, tuple, dictionary(얘는 이렇게 안씀) 
 menu={"커피","우유","주스"}
 print(menu, type(menu))
 menu=list(menu)
@@ -189,4 +192,71 @@ print(users)
 winners= sample(users, 4)
 print(f"치킨당첨자는 {winners[0]}이고 커피당첨자는{winners[1]}다")
 
+
+weather= "눈"
+if (weather  =="비" or "눈"):
+  print("우산챙겨")
+elif weather == "맑음":
+  print("햇살이여~")
+else :
+  print("뭐여날씨 ")
+
+temp= int(input("기온뭐야: ?"))
+if temp== 30:
+  print("더워요")
+elif temp>30:
+  print("더워디져")
+else:
+  print("추울 수도")
+
+for i in range(1,11,2):
+  print(i)
+
+for waiting_num in[0,1,2,3,4]:
+  print(f"대기번호: {waiting_num}")
+
+for n in range(1,6):
+  print(f"대기번호:{n}")
+
+starbucks=["아이언맨","토르","아이엠그루트"]
+
+for customer in starbucks:
+  print(f"{customer}: 커피가 준비됌")
+
+
+customer="토르"
+person="unknown"
+while person!=customer:
+  print(f"{person}, 커피가 준비됨")
+  person= input("이름이 어떻게...?")
+
+absent= [2,5]
+no_book=[3,4]
+for student in range(1,11):
+  if student in absent:
+    continue
+  elif student in no_book:
+    print(f"오늘 수업 끝 {student}는 교무실로 따라와") 
+    break
+  else :
+    print(f"{student}야, 책을 읽어봐")
+  
+
+
+s=[1,2,3,4,5]
+print(s)
+
+s= [i+100 for i in s]
+
+print(s)
+
+
+# !!중요
+# 학생들 이름을 길이로 변환
+students=["Iron Man","Thor","I Am Groot"]
+# students=[len(i) for i in students]
+print(students)
+students=[i.upper() for i in students]
+
+print(students)
 
