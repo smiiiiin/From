@@ -4,7 +4,7 @@
 left조인을 함으로써 가짜숫자 NUM에대해서 진짜 시간일때, 
 count가 없다는 공간을 즉, null의 공간을 만들어 놓을 수가 있다. 
 */
-
+   
 /*2번 동명 동수에 맞게*/
 SELECT DISTINCT(NAME), COUNT(*) "COUNT"
 FROM ANIMAL_INS
