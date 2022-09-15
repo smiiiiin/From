@@ -1,4 +1,4 @@
-SELECT ANIMAL_TYPE,   
+SELECT ANIMAL_TYPE,      
 IFNULL(NAME, "No name") AS NAME, SEX_UPON_INTAKE 
 /* AS 뒤에 것을 검색하되, 만약 앞에 변수가 null이면 뒤에걸로 검색 (앞,뒤)*/
 FROM ANIMAL_INS;
